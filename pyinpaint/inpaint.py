@@ -27,7 +27,7 @@ class Inpainting:
     self.mask = mask 
     self.ps = ps
 
-  def __call__(self, k_boundary=4, k_search=500, k_patch=5):
+  def __call__(self, k_boundary=4, k_search=1000, k_patch=5):
     """
     k_boundary: used for finding the boundary pixels
     k_search: used for search in the neighborhood of the boundary pixels
