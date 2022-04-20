@@ -42,7 +42,10 @@ This returns a numpy array `inpainted_img`.
 ![image](https://user-images.githubusercontent.com/38216671/164310841-6cbc55d3-f6b3-449f-9148-a81d28d6c707.png)
 
 
-## How to create an inpainting mask ?
+## Video demonstration
+This video shows:
+- How to create an inpainting mask in Gimp.
+- How to inpaint using command line.
 
 ## Params description and usage
 The following description of the parameters is useful to **gain speed-ups** and to **inpaint low spatial frequency** texture images.
