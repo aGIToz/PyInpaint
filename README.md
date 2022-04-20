@@ -22,6 +22,7 @@ pip install pyinpaint
 - Command line
 ```bash
 pyinpaint --org_img "path/to/original/image" --mask "path/to/mask"
+
 # pyinpaint --org_img  --mask  --ps --k_boundary --k_search --k_patch
 ```
 The output is an inpainted image at the path of `org_img`.
