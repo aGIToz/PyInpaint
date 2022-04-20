@@ -38,9 +38,9 @@ inpainted_img = inpaint()
 This returns a numpy array `inpainted_img`.
 
 ## Results
-- image1
-- image2
-- image3
+![image](https://user-images.githubusercontent.com/38216671/164308585-23f48a12-6ae3-4bf5-b6a3-efca66592548.png)
+![image](https://user-images.githubusercontent.com/38216671/164310841-6cbc55d3-f6b3-449f-9148-a81d28d6c707.png)
+
 
 ## How to create an inpainting mask ?
 
