@@ -34,6 +34,7 @@ This returns a numpy array `inpainted_img`.
 
 
 ## Video demonstration
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/ZHRibelSFdE/0.jpg)](https://www.youtube.com/watch?v=ZHRibelSFdE)
 This video shows:
 - How to create an inpainting mask in Gimp.
 - How to inpaint using command line.
