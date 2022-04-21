@@ -14,7 +14,7 @@ install_requires = [
 
 setup(
     name="pyinpaint",
-    version="0.0.2",
+    version="1.0.0",
     description="A lightweight image inpainting tool",
     url="https://github.com/aGIToz/PyInpaint",
     python_requires='>=3.6',
