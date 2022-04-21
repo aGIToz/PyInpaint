@@ -1,17 +1,7 @@
 # PyInpaint
-A lightwieght inpainting tool for images written in python. Basically the inpainting is achieved using harmonic extension on a non-local graph created using image to be inpainted.
-![image](https://user-images.githubusercontent.com/38216671/164158143-b28c96ef-bd3a-4112-862a-c0b99599e385.png)
-- `f(u)` is the signal (rgb values) on the node `u`.
-- `\Delta_{w,p}` is the weighted graph `p` Laplacian.
-- `A` is the area to be inpainted.
-- `dA` is the area where signal is given as `g(u)`.
+A lightwieght image inpainting tool written in python. Simple and effective tool to remove scratches, bruises and small holes in images. Could be easily integrated at the backend for Flask or Django apps related to image restoration.
 
-For `p=2` the solution to the above equation yields non-local means.
-![image](https://user-images.githubusercontent.com/38216671/164158622-6824240d-2f3d-41eb-b5a5-24d68027411f.png)
-- `w(u,v)` is the weight on the edge from node `u` to `v`.
-- `N(u)` is the set of neighbors of node `u`.
-- `d(u)` is the degree at node `u`.
-
+Inpainting is a process of image restoration, the idea is to fill the damage, deteriorated or missing part of an image to present a complete image. It can also be used to remove unwanted parts in an image. Deep learning based approaches use GANs to inpaint. This requires significant amount of training. The proposed tool quickly inpaints by solving a PDE on graphs. 
 
 ## Installation
 ```bash
@@ -54,3 +44,17 @@ The following description of the parameters is useful to **gain speed-ups** and 
 - k_boundary: This is used to determine the nodes at the intersection of `A` and `dA`. The default is 4. To gain speed-up try changing to 8 or 16.  
 - k_search: This is used for searching the non-local neighbors of a node. The default is 1000. For large size images it should be increased. To gain speed-up try with 300, 400, 500.
 - k_patch: The knn value for the non-local graph construction. The default is 5. Try 3 for speed-up. Try larger value to increase the resolution.
+
+## How it works?
+Basically the inpainting is achieved using harmonic extension on a non-local graph created using image to be inpainted.
+![image](https://user-images.githubusercontent.com/38216671/164158143-b28c96ef-bd3a-4112-862a-c0b99599e385.png)
+- `f(u)` is the signal (rgb values) on the node `u`.
+- `\Delta_{w,p}` is the weighted graph `p` Laplacian.
+- `A` is the area to be inpainted.
+- `dA` is the area where signal is given as `g(u)`.
+
+For `p=2` the solution to the above equation yields non-local means.
+![image](https://user-images.githubusercontent.com/38216671/164158622-6824240d-2f3d-41eb-b5a5-24d68027411f.png)
+- `w(u,v)` is the weight on the edge from node `u` to `v`.
+- `N(u)` is the set of neighbors of node `u`.
+- `d(u)` is the degree at node `u`.
