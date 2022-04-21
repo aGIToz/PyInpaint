@@ -57,5 +57,5 @@ The following description of the parameters is useful to **gain speed-ups** and 
 | --- | --- |
 | ps | Patch size, it is used for creating the non-local graph. The default value is 7. To gain speed-up try with 3 or 5. Ideally it should be an odd value. For images with low spatial frequency texture, should be kept high like 11, 13 or 15 ... |
 | k_boundary | To determine the nodes at the intersection of `A` and `dA`. The default is 4. To gain speed-up try changing to 8 or 16. |
-| K_search | Determines the region for searching the non-local neighbors of a node. The default is 1000. For large size images it should be increased. To gain speed-up try with 300, 400, 500. |
-| K_patch | The KNN value for the non-local graph construction. The default is 5. Try 3 for speed-up. Try larger value to increase the resolution. |
+| k_search | Determines the region for searching the non-local neighbors of a node. The default is 1000. For large size images it should be increased. To gain speed-up try with 300, 400, 500. |
+| k_patch | The KNN value for the non-local graph construction. The default is 5. Try 3 for speed-up. Try larger value to increase the resolution. |
